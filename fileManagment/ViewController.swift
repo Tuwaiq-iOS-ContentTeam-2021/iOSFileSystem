@@ -78,7 +78,7 @@ let typeIndex = actionTypeSegment.selectedSegmentIndex
           
                               fileManager.createFile(atPath: dirForFile!.path, contents: text, attributes: nil)
                         self.selectedFolderName = nil
-                        showAlert(message: "تم انشاء ملف جديد بداخل المجلد المختار", title: "تمت العملية بنجاح", actionTitle: "حسنا")
+                        showAlert(message: "تم انشاء ملف جديد بداخل المجلد المختار ", title: "تمت العملية بنجاح", actionTitle: "حسنا")
 
                         
                     }else{
