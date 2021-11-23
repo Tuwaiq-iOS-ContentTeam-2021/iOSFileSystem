@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fileManagment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jx2-uD-Hba">
+                                <rect key="frame" x="15" y="115" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="اسم الملف/المجلد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arp-P8-0HV">
+                                <rect key="frame" x="242" y="76" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-hm-yb4">
+                                <rect key="frame" x="15" y="435" width="384" height="427"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FileTableViewCell" id="BgL-Qf-qmw" customClass="FileTableViewCell" customModule="fileManagment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BgL-Qf-qmw" id="bwO-DZ-AGz">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kQ-67-JII">
+                                                    <rect key="frame" x="154" y="11.5" width="76" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7kQ-67-JII" firstAttribute="centerX" secondItem="bwO-DZ-AGz" secondAttribute="centerX" id="HaH-Gt-2yl"/>
+                                                <constraint firstItem="7kQ-67-JII" firstAttribute="centerY" secondItem="bwO-DZ-AGz" secondAttribute="centerY" id="LSN-ak-w7f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fileNameLabel" destination="7kQ-67-JII" id="pjF-M4-Gsn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iSt-5Q-KOh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8n4-4L-05c"/>
+                                </connections>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fRZ-7K-jap">
+                                <rect key="frame" x="20" y="209" width="374" height="144"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="4xu-Vl-vxO"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdm-j7-Acd">
+                                <rect key="frame" x="90" y="393" width="234" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.33069592710000001" green="0.71695917840000001" blue="0.74902826550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="انشاء"/>
+                                <connections>
+                                    <action selector="createFileAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILo-L1-pgv"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-VS-KOd">
+                                <rect key="frame" x="30" y="164" width="354" height="32"/>
+                                <segments>
+                                    <segment title="ملف"/>
+                                    <segment title="مجلد"/>
+                                    <segment title="ملف ومجلد"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentUpdate:" destination="BYZ-38-t0r" eventType="valueChanged" id="XYu-aS-ufS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.33069592710000001" green="0.71695917840000001" blue="0.74902826550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Q8N-VS-KOd" firstAttribute="top" secondItem="jx2-uD-Hba" secondAttribute="bottom" constant="15" id="0eN-YK-Elc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MJf-hm-yb4" secondAttribute="trailing" constant="15" id="2Bh-YY-i5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="arp-P8-0HV" secondAttribute="trailing" constant="15" id="2qU-gq-SMc"/>
+                            <constraint firstItem="fRZ-7K-jap" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="6zO-3C-uec"/>
+                            <constraint firstItem="Q8N-VS-KOd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9Ha-ZD-eJf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fRZ-7K-jap" secondAttribute="trailing" constant="20" id="A9g-zn-6YM"/>
+                            <constraint firstItem="fRZ-7K-jap" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jk9-wH-3Of"/>
+                            <constraint firstItem="MJf-hm-yb4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QKx-2o-G1u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vdm-j7-Acd" secondAttribute="trailing" constant="90" id="R8F-0r-nNs"/>
+                            <constraint firstItem="jx2-uD-Hba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="X9h-4n-efx"/>
+                            <constraint firstItem="jx2-uD-Hba" firstAttribute="top" secondItem="arp-P8-0HV" secondAttribute="bottom" constant="18" id="aem-fj-ddP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jx2-uD-Hba" secondAttribute="trailing" constant="15" id="e5m-ll-CAG"/>
+                            <constraint firstItem="Vdm-j7-Acd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="lKv-YQ-cYD"/>
+                            <constraint firstItem="Vdm-j7-Acd" firstAttribute="top" secondItem="fRZ-7K-jap" secondAttribute="bottom" constant="40" id="ll3-xz-K0R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q8N-VS-KOd" secondAttribute="trailing" constant="30" id="m79-58-dc0"/>
+                            <constraint firstItem="MJf-hm-yb4" firstAttribute="top" secondItem="Vdm-j7-Acd" secondAttribute="bottom" constant="8" symbolic="YES" id="mRo-GB-wdB"/>
+                            <constraint firstItem="arp-P8-0HV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="tAh-2b-FWN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MJf-hm-yb4" secondAttribute="bottom" id="wk9-wK-zXt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionTypeSegment" destination="Q8N-VS-KOd" id="vYJ-fm-0Bd"/>
+                        <outlet property="contentTextField" destination="fRZ-7K-jap" id="I2K-gz-4jO"/>
+                        <outlet property="fileTableView" destination="MJf-hm-yb4" id="l6u-2e-Xbs"/>
+                        <outlet property="filesTextField" destination="jx2-uD-Hba" id="I32-Fn-F0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
