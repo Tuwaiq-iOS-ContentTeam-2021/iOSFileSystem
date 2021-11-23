@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fileSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-Lx-enx">
+                                <rect key="frame" x="67" y="102" width="280" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="oMG-Pq-ZB6"/>
+                                    <constraint firstAttribute="height" constant="34" id="ubt-am-iRb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTq-fk-BFc">
+                                <rect key="frame" x="20" y="352" width="181" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="181" id="1Nd-k8-OWz"/>
+                                    <constraint firstAttribute="height" constant="31" id="9th-Wr-uc7"/>
+                                    <constraint firstAttribute="width" constant="181" id="qqZ-Vr-Kda"/>
+                                </constraints>
+                                <color key="tintColor" red="0.91976243260000001" green="0.011259747549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Folder">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDD-8o-jYh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name for the new folder : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq8-7b-V1B">
+                                <rect key="frame" x="73" y="73" width="268" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="lo5-Zu-CD4"/>
+                                    <constraint firstAttribute="height" constant="21" id="xdS-Wg-RN9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJZ-xe-Qpo">
+                                <rect key="frame" x="0.0" y="440" width="414" height="456"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="SYN-zQ-j06"/>
+                                    <constraint firstAttribute="height" constant="456" id="Zuw-la-jlq"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellkey" id="kFd-xV-Xuz" customClass="classFotTV" customModule="fileSystem" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kFd-xV-Xuz" id="4so-Pk-sZ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-M0-old">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="MCb-ou-Pot"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qDh-M0-old" firstAttribute="leading" secondItem="4so-Pk-sZ2" secondAttribute="leadingMargin" id="DG2-vd-kEZ"/>
+                                                <constraint firstItem="qDh-M0-old" firstAttribute="trailing" secondItem="4so-Pk-sZ2" secondAttribute="trailingMargin" id="I9h-TF-7LY"/>
+                                                <constraint firstItem="qDh-M0-old" firstAttribute="top" secondItem="4so-Pk-sZ2" secondAttribute="topMargin" id="kW0-Kk-FC9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qDh-M0-old" secondAttribute="bottom" id="nLV-PG-Shy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="qDh-M0-old" id="2E3-6u-RJm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JS7-Oc-znc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bY4-Bo-fKF"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your folders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-n7-vHL">
+                                <rect key="frame" x="135" y="411" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="PC5-Ja-DBt"/>
+                                    <constraint firstAttribute="height" constant="21" id="xxE-xZ-jKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddr-75-Bkr">
+                                <rect key="frame" x="228" y="352" width="166" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="ORC-iJ-MEb"/>
+                                    <constraint firstAttribute="height" constant="31" id="zEL-Eo-uZc"/>
+                                </constraints>
+                                <color key="tintColor" red="0.91976243260000001" green="0.011259747549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create File">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCL-0n-fX8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-YM-GNi">
+                                <rect key="frame" x="63" y="200" width="288" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="E94-vG-s3A"/>
+                                    <constraint firstAttribute="width" constant="288" id="dea-Y2-hae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the name of the new file :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ml-FA-our">
+                                <rect key="frame" x="89" y="165" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FHK-dV-ItC"/>
+                                    <constraint firstAttribute="width" constant="236" id="iaI-sO-JBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-4m-Ukn">
+                                <rect key="frame" x="65" y="276" width="284" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="VUS-fN-Zcx"/>
+                                    <constraint firstAttribute="height" constant="34" id="Xdf-wE-ZEV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description for the file :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HB-at-dO3">
+                                <rect key="frame" x="118" y="247" width="178" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="QeS-z8-QNY"/>
+                                    <constraint firstAttribute="height" constant="21" id="hAo-sH-RKz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ddr-75-Bkr" firstAttribute="top" secondItem="s3w-4m-Ukn" secondAttribute="bottom" constant="42" id="13G-Xd-E8T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFI-n7-vHL" secondAttribute="trailing" constant="135" id="1H5-U7-7e0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFV-YM-GNi" secondAttribute="trailing" constant="63" id="Cen-6C-j6a"/>
+                            <constraint firstItem="jJZ-xe-Qpo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cif-Ss-g6P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7HB-at-dO3" secondAttribute="trailing" constant="118" id="E35-hD-rTC"/>
+                            <constraint firstItem="Ddr-75-Bkr" firstAttribute="leading" secondItem="DTq-fk-BFc" secondAttribute="trailing" constant="27" id="EUb-7A-jNm"/>
+                            <constraint firstItem="Ddr-75-Bkr" firstAttribute="leading" secondItem="DTq-fk-BFc" secondAttribute="trailing" constant="27" id="Efg-T3-nMr"/>
+                            <constraint firstItem="6ml-FA-our" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="K81-21-eJa"/>
+                            <constraint firstItem="DTq-fk-BFc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MGE-XO-8sI"/>
+                            <constraint firstItem="fFV-YM-GNi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="NRw-wZ-Rtu"/>
+                            <constraint firstItem="7HB-at-dO3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="ROC-Q7-oF2"/>
+                            <constraint firstItem="s3w-4m-Ukn" firstAttribute="top" secondItem="7HB-at-dO3" secondAttribute="bottom" constant="8" symbolic="YES" id="RU2-Ja-rWg"/>
+                            <constraint firstItem="Ddr-75-Bkr" firstAttribute="leading" secondItem="DTq-fk-BFc" secondAttribute="trailing" constant="27" id="T0d-UN-aJJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6ml-FA-our" secondAttribute="trailing" constant="89" id="TdN-6Q-RI7"/>
+                            <constraint firstItem="DTq-fk-BFc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UVK-4N-Fyt"/>
+                            <constraint firstItem="6ml-FA-our" firstAttribute="top" secondItem="tHa-Lx-enx" secondAttribute="bottom" constant="29" id="Vr2-g5-hfP"/>
+                            <constraint firstItem="tHa-Lx-enx" firstAttribute="top" secondItem="dq8-7b-V1B" secondAttribute="bottom" constant="8" symbolic="YES" id="WyM-b4-Pv0"/>
+                            <constraint firstItem="dq8-7b-V1B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="YIH-QO-crj"/>
+                            <constraint firstItem="sFI-n7-vHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="ZOx-2R-gEO"/>
+                            <constraint firstItem="sFI-n7-vHL" firstAttribute="top" secondItem="DTq-fk-BFc" secondAttribute="bottom" constant="28" id="d4S-2p-Rfm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dq8-7b-V1B" secondAttribute="trailing" constant="73" id="d6d-Sj-i04"/>
+                            <constraint firstItem="fFV-YM-GNi" firstAttribute="top" secondItem="6ml-FA-our" secondAttribute="bottom" constant="14" id="eM1-Uo-Idl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ddr-75-Bkr" secondAttribute="trailing" constant="20" id="lvZ-2N-u3B"/>
+                            <constraint firstItem="tHa-Lx-enx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="mcP-Ht-ls4"/>
+                            <constraint firstItem="jJZ-xe-Qpo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nAj-Sy-fNu"/>
+                            <constraint firstItem="DTq-fk-BFc" firstAttribute="top" secondItem="s3w-4m-Ukn" secondAttribute="bottom" constant="42" id="rex-sl-2lm"/>
+                            <constraint firstAttribute="bottom" secondItem="jJZ-xe-Qpo" secondAttribute="bottom" id="up6-MY-m1x"/>
+                            <constraint firstItem="dq8-7b-V1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="vqH-Gd-LmJ"/>
+                            <constraint firstItem="7HB-at-dO3" firstAttribute="top" secondItem="fFV-YM-GNi" secondAttribute="bottom" constant="13" id="wXQ-TV-kB5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s3w-4m-Ukn" secondAttribute="trailing" constant="65" id="xN9-8O-FMw"/>
+                            <constraint firstItem="6ml-FA-our" firstAttribute="top" secondItem="tHa-Lx-enx" secondAttribute="bottom" constant="29" id="xrM-vT-smN"/>
+                            <constraint firstItem="s3w-4m-Ukn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="yHf-ZP-8h5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tHa-Lx-enx" secondAttribute="trailing" constant="67" id="yXr-Ss-Tx8"/>
+                            <constraint firstItem="DTq-fk-BFc" firstAttribute="baseline" secondItem="Ddr-75-Bkr" secondAttribute="baseline" id="zJK-bg-XzC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descr" destination="s3w-4m-Ukn" id="4G2-ch-RXb"/>
+                        <outlet property="enterName" destination="tHa-Lx-enx" id="07E-eK-dlD"/>
+                        <outlet property="fileName" destination="fFV-YM-GNi" id="1Bd-DP-bAL"/>
+                        <outlet property="tableView" destination="jJZ-xe-Qpo" id="bRo-WP-MIy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
