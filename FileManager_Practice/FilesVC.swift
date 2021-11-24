@@ -10,19 +10,13 @@ import UIKit
 class FilesVC : UIViewController {
 
     @IBOutlet weak var folderName: UILabel!
-    
     @IBOutlet weak var fileName: UILabel!
-    
     @IBOutlet weak var fileContent: UITextView!
-    
     @IBOutlet weak var filesTableView: UITableView!
     
     var selectedFolderName : String = ""
-    
     var filesArray : [String] = []
-    
     let manager = FileManager.default
-    
     var folderUrl : URL?
     
     override func viewDidLoad() {
@@ -40,9 +34,8 @@ class FilesVC : UIViewController {
             self.filesArray = files
         }
         catch{
-            print("error")
+            print(error.localizedDescription)
         }
-        print(folderUrl)
         
         filesTableView.layer.cornerRadius = 10
         fileContent.layer.cornerRadius = 10
@@ -73,16 +66,14 @@ extension FilesVC : UITableViewDelegate, UITableViewDataSource {
 extension FilesVC {
     
     func showFileContent(fileName : String){
-        
         let Url = folderUrl!.appendingPathComponent(selectedFolderName).appendingPathComponent(fileName)
         
         do {
             let content = try String(contentsOf: Url, encoding: .utf8)
             fileContent.text = content
         }
-        
         catch{
-            print("somthing's wrong")
+            print(error.localizedDescription )
         }
     }
 }

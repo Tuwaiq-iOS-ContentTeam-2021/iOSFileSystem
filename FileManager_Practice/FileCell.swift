@@ -9,7 +9,6 @@ import UIKit
 
 class FileCell: UITableViewCell {
 
-    
     @IBOutlet weak var fileName: UILabel!
     
     override func awakeFromNib() {

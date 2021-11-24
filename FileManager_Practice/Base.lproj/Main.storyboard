@@ -75,7 +75,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.058850220959999998" green="0.058850220959999998" blue="0.058850220959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.05882352591" green="0.05882352591" blue="0.05882352591" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" red="0.2032194084" green="0.45555160979999998" blue="0.1798026646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="folderName" destination="7A2-pr-qnV" id="G0X-g6-BE9"/>
@@ -146,8 +146,8 @@
                     <connections>
                         <outlet property="errorMsg" destination="KUW-WQ-mhc" id="179-af-UCB"/>
                         <outlet property="fileContent" destination="Pw1-Hw-foS" id="dDI-HN-VqF"/>
+                        <outlet property="fileFolderName" destination="VVK-1K-q0R" id="mpH-UM-6sm"/>
                         <outlet property="foldersTableView" destination="2Zb-CX-6a6" id="Cja-B5-dvv"/>
-                        <outlet property="name" destination="VVK-1K-q0R" id="mpH-UM-6sm"/>
                         <outlet property="switchh" destination="P8e-U6-JMv" id="g7p-fP-P2D"/>
                         <segue destination="MCO-fh-aAB" kind="show" identifier="segue" id="iTI-Tz-Mof"/>
                     </connections>
@@ -168,37 +168,37 @@
                                 <rect key="frame" x="20" y="127" width="374" height="734"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7jK-Y6-gpa">
-                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-8S-KZf">
-                                                <rect key="frame" x="0.0" y="1" width="30" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="1" width="25" height="22.5"/>
                                                 <color key="tintColor" red="0.2032194084" green="0.45555160979999998" blue="0.1798026646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="9C1-qd-WlR"/>
-                                                    <constraint firstAttribute="height" constant="30" id="qif-en-Pxb"/>
+                                                    <constraint firstAttribute="width" constant="25" id="9C1-qd-WlR"/>
+                                                    <constraint firstAttribute="height" constant="25" id="qif-en-Pxb"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWK-3r-ZNU">
-                                                <rect key="frame" x="38" y="0.0" width="44.5" height="30"/>
+                                                <rect key="frame" x="33" y="0.0" width="44.5" height="25"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-m4-ELK">
-                                        <rect key="frame" x="0.0" y="50" width="81.5" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-m4-ELK">
+                                        <rect key="frame" x="0.0" y="45" width="70.5" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CpS-th-uub">
-                                                <rect key="frame" x="0.0" y="1" width="30" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="1" width="25" height="22.5"/>
                                                 <color key="tintColor" red="0.2032194084" green="0.45555160979999998" blue="0.1798026646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="LbJ-cm-Zel"/>
-                                                    <constraint firstAttribute="height" constant="30" id="ROM-Ll-xSQ"/>
+                                                    <constraint firstAttribute="width" constant="25" id="LbJ-cm-Zel"/>
+                                                    <constraint firstAttribute="height" constant="25" id="ROM-Ll-xSQ"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sk-Vt-Daj">
-                                                <rect key="frame" x="44" y="0.0" width="37.5" height="30"/>
+                                                <rect key="frame" x="33" y="0.0" width="37.5" height="25"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KLZ-NC-N29">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="89"/>
+                                        <rect key="frame" x="0.0" y="90" width="374" height="89"/>
                                         <color key="backgroundColor" red="0.09027777777777779" green="0.09027777777777779" blue="0.09027777777777779" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="89" id="ral-a7-5qp"/>
@@ -216,7 +216,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tt1-po-ImJ">
-                                        <rect key="frame" x="0.0" y="209" width="374" height="525"/>
+                                        <rect key="frame" x="0.0" y="199" width="374" height="535"/>
                                         <color key="backgroundColor" red="0.090277777779999999" green="0.090277777779999999" blue="0.090277777779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fileCell" id="KkP-PE-qXE" customClass="FileCell" customModule="FileManager_Practice" customModuleProvider="target">
@@ -289,7 +289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcG-ec-plS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.98550724637681" y="67.633928571428569"/>
+            <point key="canvasLocation" x="303" y="68"/>
         </scene>
     </scenes>
     <resources>

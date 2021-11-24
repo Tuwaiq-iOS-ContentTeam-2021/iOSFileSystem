@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD6F4F03274E140600AF104E /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F4F02274E140600AF104E /* VC2.swift */; };
 		AD6F4F05274E204100AF104E /* FileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F4F04274E204100AF104E /* FileCell.swift */; };
 		AD6F4F07274E251300AF104E /* FilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6F4F06274E251300AF104E /* FilesVC.swift */; };
 		AD7B0052274CF59700F2761E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7B0051274CF59700F2761E /* AppDelegate.swift */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD6F4F02274E140600AF104E /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		AD6F4F04274E204100AF104E /* FileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCell.swift; sourceTree = "<group>"; };
 		AD6F4F06274E251300AF104E /* FilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesVC.swift; sourceTree = "<group>"; };
 		AD7B004E274CF59700F2761E /* FileManager_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +70,6 @@
 				AD7B005C274CF59A00F2761E /* LaunchScreen.storyboard */,
 				AD7B005F274CF59A00F2761E /* Info.plist */,
 				AD7B0067274D0A1900F2761E /* Cell.swift */,
-				AD6F4F02274E140600AF104E /* VC2.swift */,
 				AD6F4F04274E204100AF104E /* FileCell.swift */,
 				AD6F4F06274E251300AF104E /* FilesVC.swift */,
 			);
@@ -153,7 +150,6 @@
 				AD6F4F07274E251300AF104E /* FilesVC.swift in Sources */,
 				AD7B0056274CF59700F2761E /* ViewController.swift in Sources */,
 				AD7B0068274D0A1900F2761E /* Cell.swift in Sources */,
-				AD6F4F03274E140600AF104E /* VC2.swift in Sources */,
 				AD6F4F05274E204100AF104E /* FileCell.swift in Sources */,
 				AD7B0052274CF59700F2761E /* AppDelegate.swift in Sources */,
 				AD7B0054274CF59700F2761E /* SceneDelegate.swift in Sources */,

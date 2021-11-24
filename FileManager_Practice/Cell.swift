@@ -9,7 +9,6 @@ import UIKit
 
 class Cell: UITableViewCell {
 
-    
     @IBOutlet weak var folderName: UILabel!
     
     override func awakeFromNib() {
