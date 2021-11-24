@@ -49,10 +49,12 @@ extension FilesVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "fileCell" , for: indexPath) as! FileCell
-        cell.fileName.text = filesArray[indexPath.row]
-        cell.layer.cornerRadius = 10
-        return cell
+        let fileCell = tableView.dequeueReusableCell(withIdentifier: "fileCell" , for: indexPath) as! FileCell
+        fileCell.fileName.text = filesArray[indexPath.row]
+        
+        fileCell.layer.cornerRadius = 10
+        
+        return fileCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -7,13 +7,13 @@
 
 import UIKit
 
-class Cell: UITableViewCell {
+class FolderCell: UITableViewCell {
 
     @IBOutlet weak var folderName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        self.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

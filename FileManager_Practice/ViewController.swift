@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var errorMsg: UILabel!
+    
     @IBOutlet weak var switchh: UISwitch!
     @IBOutlet weak var fileContent : UITextView!
     var myFolders : [String] = []
@@ -65,12 +65,13 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Cell
+        let folderCell = tableView.dequeueReusableCell(withIdentifier: "FolderCell", for: indexPath) as! FolderCell
         
-        cell.folderName.text = myFolders[indexPath.row]
+        folderCell.folderName.text = myFolders[indexPath.row]
         
-        cell.layer.cornerRadius = 10
-        return cell
+        folderCell.layer.cornerRadius = 10
+        
+        return folderCell
     }
     
     
@@ -86,8 +87,8 @@ extension ViewController : UITableViewDelegate , UITableViewDataSource{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {
-            let nextVC = segue.destination as! FilesVC
-            nextVC.selectedFolderName = selectItemName
+            let filesVC = segue.destination as! FilesVC
+            filesVC.selectedFolderName = selectItemName
         }
     }
 }
@@ -97,7 +98,7 @@ extension ViewController {
     func ctreatingFolders (name : String){
         guard let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         let folderUrl = url.appendingPathComponent(name)
-        print(url.path)
+        
         do {
             try manager.createDirectory(at: folderUrl,
                                          withIntermediateDirectories: true,
@@ -109,12 +110,13 @@ extension ViewController {
         }
     }
     
-    
     func ctreatingFiles (name : String){
         
-        guard selectedItem != "" else { return errorMsg.text = "you have to select a folder"  }
-        guard name.isEmpty != true else { return errorMsg.text = "File name can not be empty"}
-        
+        guard selectedItem != "" else { return
+            popAlert(title: "Friendly Note", message: "Please select a folder for your file." )}
+        guard name.isEmpty != true else { return
+            popAlert(title: "Friendly Note", message: "Please enter a file name :3")}
+
         let manager = FileManager.default
         let folderUrl = manager.urls(for: .documentDirectory, in: .userDomainMask).first
         
@@ -122,10 +124,9 @@ extension ViewController {
         
         let content = fileContent.text.data(using: .utf8)
         manager.createFile(atPath: fileName!.path, contents: content, attributes: [:])
-        errorMsg.text = "File added to \(selectedItem) ✔️"
-        errorMsg.textColor = .white
-        fileFolderName.text = " "
-        fileContent.text = " "
+        popAlert(title: "Done", message: "File added to \(selectedItem)")
+        fileFolderName.text = ""
+        fileContent.text = ""
     }
     
     func reloadFolderData(){
@@ -147,8 +148,16 @@ extension ViewController {
             }
         }
         catch{
-            print("smothing went wrong")
+            print("Directory not found. Error : \(error.localizedDescription)")
         }
+    }
+    
+    func popAlert(title : String, message : String){
         
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil ))
+        self.present(alertController, animated: true) {
+            
+        }
     }
 }

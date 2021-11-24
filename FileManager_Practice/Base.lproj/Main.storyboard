@@ -52,10 +52,10 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Zb-CX-6a6">
-                                <rect key="frame" x="20" y="404" width="374" height="458"/>
+                                <rect key="frame" x="20" y="409" width="374" height="453"/>
                                 <color key="backgroundColor" red="0.058850220959999998" green="0.058850220959999998" blue="0.058850220959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" focusStyle="custom" textLabel="7A2-pr-qnV" imageView="2ZS-Sh-WWL" style="IBUITableViewCellStyleDefault" id="wpd-C1-Ljn" customClass="Cell" customModule="FileManager_Practice" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FolderCell" focusStyle="custom" textLabel="7A2-pr-qnV" imageView="2ZS-Sh-WWL" style="IBUITableViewCellStyleDefault" id="wpd-C1-Ljn" customClass="FolderCell" customModule="FileManager_Practice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wpd-C1-Ljn" id="0Mi-PY-dI5">
@@ -84,7 +84,7 @@
                                 </prototypes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw1-Hw-foS">
-                                <rect key="frame" x="20" y="297" width="374" height="87"/>
+                                <rect key="frame" x="20" y="302" width="374" height="87"/>
                                 <color key="backgroundColor" red="0.058850220959999998" green="0.058850220959999998" blue="0.058850220959999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="TDo-h9-OHU"/>
@@ -93,58 +93,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-WQ-mhc">
-                                <rect key="frame" x="20" y="257" width="374" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="sIv-Gc-E4G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.8268623737373737" green="0.29811144580843496" blue="0.058464713196953531" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My File Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiv-7N-lUR">
                                 <rect key="frame" x="20" y="116" width="374" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P8e-U6-JMv">
-                                <rect key="frame" x="20" y="258" width="51" height="31"/>
-                                <color key="onTintColor" red="0.2032194084" green="0.45555160979999998" blue="0.1798026646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="switched:" destination="BYZ-38-t0r" eventType="valueChanged" id="vNH-hx-z1a"/>
-                                </connections>
-                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-IA-4T9">
+                                <rect key="frame" x="20" y="259" width="374" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P8e-U6-JMv">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.2032194084" green="0.45555160979999998" blue="0.1798026646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="switched:" destination="BYZ-38-t0r" eventType="valueChanged" id="vNH-hx-z1a"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable moving to folder details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-WQ-mhc">
+                                        <rect key="frame" x="59" y="0.0" width="315" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KUW-WQ-mhc" firstAttribute="leading" secondItem="JHh-27-MFk" secondAttribute="leading" id="7FJ-s4-hwV"/>
-                            <constraint firstItem="P8e-U6-JMv" firstAttribute="leading" secondItem="KUW-WQ-mhc" secondAttribute="leading" id="DWt-em-lXe"/>
                             <constraint firstItem="aiv-7N-lUR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="ItW-T3-DOM"/>
                             <constraint firstItem="VVK-1K-q0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Iy9-oK-jSv"/>
                             <constraint firstItem="2Zb-CX-6a6" firstAttribute="top" secondItem="Pw1-Hw-foS" secondAttribute="bottom" constant="20" id="LLc-KD-OD0"/>
                             <constraint firstItem="Pw1-Hw-foS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MDh-9I-9wf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQp-IA-4T9" secondAttribute="trailing" constant="20" id="MmZ-P3-jM5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Zb-CX-6a6" secondAttribute="trailing" constant="20" id="RJv-gJ-A3q"/>
                             <constraint firstItem="JHh-27-MFk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YnX-h9-mJo"/>
                             <constraint firstItem="2Zb-CX-6a6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cXY-wl-eNw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pw1-Hw-foS" secondAttribute="trailing" constant="20" id="eeX-Cb-W3O"/>
-                            <constraint firstItem="KUW-WQ-mhc" firstAttribute="trailing" secondItem="JHh-27-MFk" secondAttribute="trailing" id="fun-q8-WT1"/>
                             <constraint firstItem="JHh-27-MFk" firstAttribute="top" secondItem="VVK-1K-q0R" secondAttribute="bottom" constant="22" id="gFH-Qv-R05"/>
-                            <constraint firstItem="KUW-WQ-mhc" firstAttribute="top" secondItem="JHh-27-MFk" secondAttribute="bottom" constant="10" id="hRP-Sg-NPt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JHh-27-MFk" secondAttribute="trailing" constant="20" id="mxE-no-PY4"/>
-                            <constraint firstItem="P8e-U6-JMv" firstAttribute="top" secondItem="faa-sd-Prb" secondAttribute="bottom" constant="11" id="nWT-i3-hlv"/>
                             <constraint firstItem="aiv-7N-lUR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pEJ-xz-SN8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VVK-1K-q0R" secondAttribute="trailing" constant="20" id="pj1-Eb-ujZ"/>
                             <constraint firstItem="VVK-1K-q0R" firstAttribute="top" secondItem="aiv-7N-lUR" secondAttribute="bottom" constant="20" id="rsu-lJ-E1g"/>
+                            <constraint firstItem="CQp-IA-4T9" firstAttribute="top" secondItem="JHh-27-MFk" secondAttribute="bottom" constant="12" id="s68-RA-yhO"/>
+                            <constraint firstItem="CQp-IA-4T9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="saL-iO-BeE"/>
+                            <constraint firstItem="Pw1-Hw-foS" firstAttribute="top" secondItem="CQp-IA-4T9" secondAttribute="bottom" constant="12" id="ueG-NA-sLb"/>
                             <constraint firstItem="2Zb-CX-6a6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xu7-7g-lDm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aiv-7N-lUR" secondAttribute="trailing" constant="20" id="yl4-La-DTO"/>
-                            <constraint firstItem="Pw1-Hw-foS" firstAttribute="top" secondItem="KUW-WQ-mhc" secondAttribute="bottom" constant="10" id="zPU-iV-4rT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MSw-zc-gLr"/>
                     <connections>
-                        <outlet property="errorMsg" destination="KUW-WQ-mhc" id="179-af-UCB"/>
                         <outlet property="fileContent" destination="Pw1-Hw-foS" id="dDI-HN-VqF"/>
                         <outlet property="fileFolderName" destination="VVK-1K-q0R" id="mpH-UM-6sm"/>
                         <outlet property="foldersTableView" destination="2Zb-CX-6a6" id="Cja-B5-dvv"/>
