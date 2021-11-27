@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  FileManager01
+//  FileManager
 //
-//  Created by Taraf Bin suhaim on 19/04/1443 AH.
+//  Created by Taraf Bin suhaim on 22/04/1443 AH.
 //
 
 import UIKit
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "FileManager01")
+        let container = NSPersistentContainer(name: "FileManager")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

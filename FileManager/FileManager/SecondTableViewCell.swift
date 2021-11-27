@@ -1,15 +1,15 @@
 //
-//  TableViewCell.swift
-//  FileManager01
+//  SecondTableViewCell.swift
+//  FileManager
 //
-//  Created by Taraf Bin suhaim on 19/04/1443 AH.
+//  Created by Taraf Bin suhaim on 22/04/1443 AH.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class SecondTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var FolderLabel: UILabel!
+    @IBOutlet weak var fileName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,5 +18,4 @@ class TableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }
