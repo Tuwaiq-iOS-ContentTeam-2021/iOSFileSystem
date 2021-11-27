@@ -30,7 +30,17 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(dirURL!.path)
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(arrPath[indexPath.row])
+            arrPath.remove(at: indexPath.row)
+            self.tabelViewFile.reloadData()
+            save()
+        }
+    }
     @IBOutlet weak var failname: UITextField!
     @IBOutlet weak var tabelViewFile: UITableView!
     
@@ -106,6 +116,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             print(error)
         }
     }
+    
     
     
 
